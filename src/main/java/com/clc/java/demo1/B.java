@@ -5,9 +5,12 @@ public class B extends A{
 	
 	int num2=100;
 	
+	
 
 	public void m1(){ 	
-			//I -I   -- direct access 
+	
+			System.out.println("git commit");
+		//I -I   -- direct access 
 			System.out.println(publicVar);
 			System.out.println(protectedVar);
 			System.out.println(defaultVar);
