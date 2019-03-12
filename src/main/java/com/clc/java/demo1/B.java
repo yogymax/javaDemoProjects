@@ -3,7 +3,7 @@ package com.clc.java.demo1;
 
 public class B extends A{
 	
-	int num2=1000;
+	int num2=100;
 	
 
 	public void m1(){ 	
