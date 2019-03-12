@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="com.clc.util.AutheticateTest"/>
+      <class name="com.clc.util.BTest"/>
+      <class name="com.clc.util.ATest"/>
+      <class name="com.clc.util.ReportGenerationLogic"/>
+      <class name="com.clc.util.MyDataProvider"/>
+      <class name="com.clc.util.MyReportGenListener"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.clc.util.AutheticateTest">
+        <methods>
+          <include name="cls"/>
+          <include name="y"/>
+          <include name="x"/>
+          <include name="verifyCrendentials" invocation-numbers="3"/>
+          <include name="a"/>
+        </methods>
+      </class> <!-- com.clc.util.AutheticateTest -->
+      <class name="com.clc.util.BTest">
+        <methods>
+          <include name="reportGeneration"/>
+        </methods>
+      </class> <!-- com.clc.util.BTest -->
+      <class name="com.clc.util.ATest">
+        <methods>
+          <include name="m3"/>
+          <include name="m7"/>
+          <include name="m6"/>
+          <include name="m66"/>
+        </methods>
+      </class> <!-- com.clc.util.ATest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

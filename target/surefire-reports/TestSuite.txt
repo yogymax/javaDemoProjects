@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.856 sec <<< FAILURE!
+m7(com.clc.util.ATest)  Time elapsed: 0.043 sec  <<< FAILURE!
+java.lang.ArithmeticException: / by zero
+	at com.clc.util.ATest.m7(ATest.java:67)
+
+verifyCrendentials(com.clc.util.AutheticateTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Password empty or invalid1] but found [Password empty or invalid]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.clc.util.AutheticateTest.verifyCrendentials(AutheticateTest.java:116)
+
