@@ -2,6 +2,7 @@ package com.clc.java.demo1;
 
 public class C {
 
+	int num=10;
 	
 
 	public void m1(){ 	
