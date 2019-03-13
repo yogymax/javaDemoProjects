@@ -1,6 +1,5 @@
 package com.clc.java.demo1;
 
-
 public class B extends A{
 	
 	int num2=100;
@@ -10,7 +9,7 @@ public class B extends A{
 	public void m1(){ 	
 	
 			System.out.println("git commit...from repo by other developer");
-		System.out.println("git commit");
+		System.out.println("git commit......2");
 		//I -I   -- direct access 
 			System.out.println(publicVar);
 			System.out.println(protectedVar);

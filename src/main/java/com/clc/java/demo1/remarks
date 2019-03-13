@@ -1,0 +1,185 @@
+	int num = 04297
+
+
+	e0 -- null
+	e1 --1/A/20  set.add(e1) -- return map.put(e1,object) == null
+	e2 --1/A/20	set.add(e2) -- return map.put(e2,11111) == null
+	e3 --1/B/33	set.add(e3) -- return map.put(e3,11111) == null
+	e4 --2/A/22	set.add(e4) -- return map.put(e4,11111) == null
+	e5 --3/C/21	set.add(e5) -- return map.put(e5,11111) == null
+	e6 --4/D/20	set.add(e6) -- return map.put(e6,11111) == null
+	
+						emp = key
+						object = value -- present --11111
+			Object put(emp,object)
+					
+					if e1 == null
+						putForNull(e0) -- table[0] -- [key,value,hash,next]
+					
+				int hashcode = e1.hashcode(); 16 bit hex no
+				int hash=hash(hashcode) -- 123183812
+				int index =	indexFor(hash) -- hash & 15
+				
+				e = table[index]
+			
+				if(e.hash == hash)
+					
+	e1 -- 1/A  -- 1
+	e2 -- 2/A  -- 1
+					
+				
+				128812291 & 5 --- 1-4
+	
+	
+		
+		Entry e = table[index]
+		
+		if(e.hash == hash  && ((e.key == key) || e.key.equals(key)) 
+		
+	Hashset<Emp> set= new HashSet() -- map = new HashMap()
+			
+
+
+	0  [e0,11111,0,null]
+	
+	
+	1  [e1 -- 111111-128812291 -- null ]
+	
+	
+	2 
+	
+	
+	3
+	
+	
+	5
+		
+		
+		
+		
+package com.clc.java.demo1;
+
+import java.util.HashMap;
+
+public class HashmapWorking {
+	
+	public static void main(String[] args) {
+	
+		Employee e1 = new Employee(1,"A");
+		Employee e2 = new Employee(1,"A");
+		Employee e3 = new Employee(2,"A");
+		Employee e4 = new Employee(2,"B");
+		Employee e5 = new Employee(3,"C");
+		Employee e6 = new Employee(3,"D");
+		Employee e7=e1;
+		
+		HashMap<Employee,String> hmap = new HashMap<>();
+		hmap.put(e1,"v1");//null
+		hmap.put(e2,"v2");//null
+					hmap.put(e3,"v3");//null
+					hmap.put(e4,"v4");//null -- e3 - v4
+					hmap.put(e5,"v5");//null
+					hmap.put(e6,"v6");//null -- e5 - v6
+		hmap.put(e7,"v7");//v1  -- e1 -- v7		e1- v7
+		
+		System.out.println(hmap);
+		
+		
+		
+		
+		
+	}
+
+}
+
+class Employee{
+	private int empId;
+	private String empName;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	@Override
+	public String toString() {
+		return "\n Employee [empId=" + empId + ", empName=" + empName + "]";
+	}
+	public Employee(int empId, String empName) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + empId;
+		result = prime * result + ((empName == null) ? 0 : empName.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (empId != other.empId)
+			return false;
+		if (empName == null) {
+			if (other.empName != null)
+				return false;
+		} else if (!empName.equals(other.empName))
+			return false;
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+	
+	
+	add(key)
+		map.put(empOb,PRESENT)==null
+		
+		
+	valuType put(key,value)
+		if(key == null)
+			return putforNUll(value); -- addEntry(0,null,value,0)
+		
+		int hash = hash(key.hashCode());
+		int index= indexFor(hash)
+		
+		
+		for(Entry<k,v> e = table[index]; e!=null;e=e.next){
+			
+			if(e.hash == hash && (e.key == key || e.key.equals(key)){
+				Object temp = e.value;
+				e.value=value
+				return temp
+
+		}			)
+			
+			addEntry(hash,key,value,index)
+			modcount++
+			return null
+		
+		
+		}
