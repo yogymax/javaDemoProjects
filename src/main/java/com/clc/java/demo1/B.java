@@ -9,7 +9,8 @@ public class B extends A{
 
 	public void m1(){ 	
 	
-			System.out.println("git commit");
+			System.out.println("git commit...from repo by other developer");
+		System.out.println("git commit");
 		//I -I   -- direct access 
 			System.out.println(publicVar);
 			System.out.println(protectedVar);
